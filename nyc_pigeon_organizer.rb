@@ -2,7 +2,6 @@ require 'pry'
 
 def nyc_pigeon_organizer (data)
   final = {}
-
   data.each do |first_level, all_other|
     all_other.each do |category, array|
       array.each do |name|
@@ -16,6 +15,7 @@ def nyc_pigeon_organizer (data)
       x.each do |item|
         if bird_name === item
           final[item][:color] << bird_color.to_s
+          binding.pry
         end 
       end 
     end 
@@ -38,6 +38,5 @@ def nyc_pigeon_organizer (data)
       end 
     end 
   end 
-  
   return final 
 end 
